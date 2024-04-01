@@ -1,0 +1,13 @@
+# Ignore Python virtual environments
+venv/
+
+# Ignore editor/IDE specific files
+.vscode/
+*.code-workspace
+
+# Ignore data files and temporary builds
+images/
+data/
+
+# Ignore PhotoHive_DSP library
+PhotoHive_DSP/
