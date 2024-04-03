@@ -20,7 +20,7 @@ PhotoHive-ML is a machine learning preprocessing tool designed to streamline the
 1. Clone the repository to your local machine.
 
 ```bash
-git clone https://github.com/your-username/PhotoHive-ML.git
+git clone https://github.com/Joseph-93/PhotoHive_ML.git
 ```
 
 2. Navigate to the cloned directory.
