@@ -2,12 +2,12 @@ import json
 import pandas as pd
 from typing import Dict
 import decimal
-from PhotoHive_DSP.core import get_report, set_bounding_boxes
+from PhotoHive_DSP import get_report, set_bounding_boxes
 from aws_helpers import get_photo_from_s3, get_rekognition_data, run_large_query
 from helpers import bounding_boxes_to_integers, get_box_coordinates, pack_jsons_into_row, read_query_from_file, verify_data_consistency
 
 # Set Debug
-DEBUG = False
+DEBUG = True
 
 class PeopleAndBikes:
     def __init__(self, objects_list=None, i_max=10, num_bikes=0, num_people=0):
@@ -173,6 +173,7 @@ def create_data_frame(query_file_path: str, max_labels: int = 10, max_faces: int
             report.image = image
             report.generate_color_palette_image()
             report.bounding_boxes = bounding_boxes
+            report.generate_blur_direction_frequency_response()
             report.display_all()
 
         # Pack JSONs together
